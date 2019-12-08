@@ -1,0 +1,15 @@
+.swbtn {
+  background: #ffe931;
+  color: black;
+  border: 0px;
+  border-bottom: 10px solid #c2af23;
+  box-shadow: 0px 0px 5px white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 60px;
+}
+.swbtn:hover {
+  background: #fdec63;
+  /* transform: scaleY(1.1); */
+  border-bottom: 5px solid #c2af23;
+}

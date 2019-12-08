@@ -1,0 +1,17 @@
+#result {
+  text-align: center;
+}
+.question {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.answer {
+  margin: 10px;
+  padding: 10px;
+  color: yellow;
+  font-size: 1.6rem;
+  font-weight: 700;
+}

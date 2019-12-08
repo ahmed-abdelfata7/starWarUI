@@ -1,0 +1,42 @@
+.logoutBtn {
+  margin: 10px;
+  float: right;
+  background-color: #46ca8b;
+  color: white;
+  border: 2px solid #46ca8b;
+  border-radius: 5px;
+}
+.starWars {
+  font-family: "Roboto", sans-serif;
+  background: black;
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.btnOverwrite {
+  width: 55%;
+  min-height: 70px;
+  font-size: 1.6rem;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+p {
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 600px) {
+  .btnOverwrite {
+    font-size: 0.9rem;
+  }
+}

@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Login from "./component/Login/Login";
+import SignupForm from "./component/Signup/Signup";
+import Dashboard from "./component/Dashboard/Dashboard";
+import Notifications from "react-notify-toast";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import PublicRoute from "./utils/publicRoute";
+import PrivateRoute from "./utils/privateRoute";
+import { useSelector } from "react-redux";
 
 function App() {
+  let isLoggedin = useSelector(state => {
+    return state;
+  });
+  const isAuth =
+    window.localStorage.getItem("isAuth") || isLoggedin ? true : false;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Notifications options={{ zIndex: 200, top: "50px" }} />
+      <Switch>
+        <PublicRoute exact path="/" component={Login} authenticated={isAuth} />
+        <PublicRoute path="/login" component={Login} authenticated={isAuth} />
+        <PublicRoute
+          path="/signup"
+          component={SignupForm}
+          authenticated={isAuth}
+        />
+        <PrivateRoute
+          path="/dashboard"
+          component={Dashboard}
+          authenticated={isAuth}
+        />
+        <PrivateRoute path="/logout" component={Login} authenticated={isAuth} />
+      </Switch>
+    </Router>
   );
 }
-
 export default App;

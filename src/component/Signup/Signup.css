@@ -1,0 +1,8 @@
+.text-truncate,
+label,
+span {
+  color: #ffe931;
+}
+.invalid-feedback {
+  text-align: left;
+}
