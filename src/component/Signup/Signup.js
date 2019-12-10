@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import APIServices from "../Services/API";
 import { notify } from "react-notify-toast";
 import SWButton from "./../SWButton/SWButton";
+import { Link } from "react-router-dom";
 import "./Signup.css";
 const SignupForm = props => {
   const formik = useFormik({
@@ -154,7 +155,7 @@ const SignupForm = props => {
                     </SWButton>
                   </div>
                   <span>
-                    Are you have account ? <a href="/login "> log in </a>
+                    Are you have account ? <Link to="/login"> log in </Link>
                   </span>
                 </form>
               </div>

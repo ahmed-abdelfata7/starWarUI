@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { SignIn } from "./../../actions/index";
 import "./Login.css";
 import SWButton from "../SWButton/SWButton";
+import { Link } from "react-router-dom";
 const Login = props => {
   const dispatch = useDispatch();
   const formik = useFormik({
@@ -101,7 +102,8 @@ const Login = props => {
                     </SWButton>
                   </div>
                   <span>
-                    Are you haven't account ?<a href="/signup"> Create one</a>
+                    Are you haven't account ?
+                    <Link to="/signup"> Create one</Link>
                   </span>
                 </form>
               </div>

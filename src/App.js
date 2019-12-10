@@ -20,13 +20,20 @@ function App() {
       <Notifications options={{ zIndex: 200, top: "50px" }} />
       <Switch>
         <PublicRoute exact path="/" component={Login} authenticated={isAuth} />
-        <PublicRoute path="/login" component={Login} authenticated={isAuth} />
         <PublicRoute
+          exact
+          path="/login"
+          component={Login}
+          authenticated={isAuth}
+        />
+        <PublicRoute
+          exact
           path="/signup"
           component={SignupForm}
           authenticated={isAuth}
         />
         <PrivateRoute
+          exact
           path="/dashboard"
           component={Dashboard}
           authenticated={isAuth}
